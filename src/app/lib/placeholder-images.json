@@ -1,0 +1,46 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "Premium South Indian Table",
+      "imageUrl": "https://picsum.photos/seed/dravida-hero/1920/1080",
+      "imageHint": "south indian food luxury"
+    },
+    {
+      "id": "dosa-visual",
+      "description": "Crispy Gold Dosa",
+      "imageUrl": "https://picsum.photos/seed/dravida-dosa/800/1200",
+      "imageHint": "dosa food photography"
+    },
+    {
+      "id": "idly-visual",
+      "description": "Soft Steamed Idly",
+      "imageUrl": "https://picsum.photos/seed/dravida-idly/800/1200",
+      "imageHint": "idly steaming food"
+    },
+    {
+      "id": "vada-visual",
+      "description": "Crunchy Medu Vada",
+      "imageUrl": "https://picsum.photos/seed/dravida-vada/800/1200",
+      "imageHint": "vada south indian"
+    },
+    {
+      "id": "vintage-kitchen-1",
+      "description": "Traditional Brass Cookware",
+      "imageUrl": "https://picsum.photos/seed/dravida-brass/600/800",
+      "imageHint": "vintage brass cookware"
+    },
+    {
+      "id": "vintage-kitchen-2",
+      "description": "Ancient Stone Grinder",
+      "imageUrl": "https://picsum.photos/seed/dravida-stone/600/800",
+      "imageHint": "traditional stone grinder"
+    },
+    {
+      "id": "concierge-avatar",
+      "description": "Heritage Concierge",
+      "imageUrl": "https://picsum.photos/seed/dravida-concierge/400/400",
+      "imageHint": "elegant elderly person"
+    }
+  ]
+}
