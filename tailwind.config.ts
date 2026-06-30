@@ -10,8 +10,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Lora', 'serif'],
-        headline: ['Cormorant Garamond', 'serif'],
+        body: ['Crimson Pro', 'serif'],
+        headline: ['Abril Fatface', 'serif'],
+        display: ['Almendra', 'serif'],
         code: ['monospace'],
       },
       colors: {
