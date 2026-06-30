@@ -1,3 +1,4 @@
+
 "use client"
 
 import React, { useLayoutEffect, useRef } from 'react';
@@ -5,7 +6,6 @@ import Image from 'next/image';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { cn } from '@/lib/utils';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,6 +13,8 @@ export function ScrollStory() {
   const containerRef = useRef<HTMLDivElement>(null);
   const pinWrapperRef = useRef<HTMLDivElement>(null); 
   const dosaRef = useRef<HTMLDivElement>(null);
+  const chutneyRef = useRef<HTMLDivElement>(null);
+  const potatoRef = useRef<HTMLDivElement>(null);
   const sectionsRef = useRef<(HTMLDivElement | null)[]>([]);
   
   const images = {
@@ -32,7 +34,7 @@ export function ScrollStory() {
       }, (context) => {
         const { isDesktop } = context.conditions as { isDesktop: boolean };
 
-        // 1. Entrance Animation - Plays ON LOAD
+        // 1. Entrance Animation
         gsap.fromTo(dosaRef.current, 
           { y: -300, rotate: -25, scale: 0.5, opacity: 0 },
           { y: 0, rotate: 0, scale: 1, opacity: 1, duration: 1.5, ease: "back.out(1.2)" }
@@ -59,6 +61,35 @@ export function ScrollStory() {
             scrub: 1,
           }
         });
+
+        // Floating Accents Animations
+        gsap.fromTo(potatoRef.current, 
+          { x: 100, opacity: 0 },
+          { 
+            x: 0, 
+            opacity: 1, 
+            scrollTrigger: {
+              trigger: sectionsRef.current[2],
+              start: "top 80%",
+              end: "top 40%",
+              scrub: true
+            }
+          }
+        );
+
+        gsap.fromTo(chutneyRef.current, 
+          { x: -100, opacity: 0 },
+          { 
+            x: 0, 
+            opacity: 1, 
+            scrollTrigger: {
+              trigger: sectionsRef.current[3],
+              start: "top 80%",
+              end: "top 40%",
+              scrub: true
+            }
+          }
+        );
 
         // Section Animations
         sectionsRef.current.forEach((section, i) => {
@@ -121,7 +152,7 @@ export function ScrollStory() {
           ref={dosaRef} 
           className="relative w-full max-w-[400px] md:max-w-[700px] aspect-[16/10]"
         >
-          {/* Main Dosa - Just the image and the drop shadow */}
+          {/* Main Dosa */}
           <div className="relative w-full h-full dosa-shadow">
             {images.dosa && (
               <Image 
@@ -135,8 +166,11 @@ export function ScrollStory() {
             )}
           </div>
           
-          {/* Floating Accents */}
-          <div className="absolute -top-10 -right-10 w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden shadow-2xl opacity-80">
+          {/* Floating Accents - Spices/Potato */}
+          <div 
+            ref={potatoRef}
+            className="absolute -top-10 -right-10 w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden shadow-2xl opacity-80"
+          >
             {images.potato && (
               <Image 
                 src={images.potato.imageUrl} 
@@ -144,6 +178,22 @@ export function ScrollStory() {
                 fill 
                 className="object-cover"
                 data-ai-hint="indian spices" 
+              />
+            )}
+          </div>
+
+          {/* Chutney Accent - WITH BROWN BORDER */}
+          <div 
+            ref={chutneyRef}
+            className="absolute -bottom-10 -left-10 w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden shadow-2xl opacity-100 border-4 border-[#3E2723]"
+          >
+            {images.chutney && (
+              <Image 
+                src={images.chutney.imageUrl} 
+                alt="Coconut Chutney" 
+                fill 
+                className="object-cover"
+                data-ai-hint="coconut chutney bowl" 
               />
             )}
           </div>
