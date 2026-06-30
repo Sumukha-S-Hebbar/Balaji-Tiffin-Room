@@ -3,9 +3,9 @@
   "placeholderImages": [
     {
       "id": "hero-dosa",
-      "description": "Top down view of a crispy Masala Dosa",
-      "imageUrl": "https://picsum.photos/seed/dosa-top/800/800",
-      "imageHint": "masala dosa plate top"
+      "description": "Top down view of a crispy Masala Dosa asset",
+      "imageUrl": "/dosa_img.png",
+      "imageHint": "folded masala dosa top"
     },
     {
       "id": "potato-filling",
