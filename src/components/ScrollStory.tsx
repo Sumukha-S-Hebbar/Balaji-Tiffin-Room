@@ -13,15 +13,12 @@ export function ScrollStory() {
   const containerRef = useRef<HTMLDivElement>(null);
   const pinWrapperRef = useRef<HTMLDivElement>(null); 
   const dosaRef = useRef<HTMLDivElement>(null);
-  const chutneyRef = useRef<HTMLDivElement>(null);
-  const potatoRef = useRef<HTMLDivElement>(null);
+  const chutneyAccentRef = useRef<HTMLDivElement>(null);
   const sectionsRef = useRef<(HTMLDivElement | null)[]>([]);
   
   const images = {
     dosa: PlaceHolderImages.find(i => i.id === 'hero-dosa'),
-    potato: PlaceHolderImages.find(i => i.id === 'potato-filling'),
     chutney: PlaceHolderImages.find(i => i.id === 'chutney-side'),
-    sambar: PlaceHolderImages.find(i => i.id === 'sambar-side'),
   };
 
   useLayoutEffect(() => {
@@ -62,26 +59,13 @@ export function ScrollStory() {
           }
         });
 
-        // Floating Accents Animations
-        gsap.fromTo(potatoRef.current, 
-          { x: 100, opacity: 0 },
+        // Chutney Accent Animation
+        gsap.fromTo(chutneyAccentRef.current, 
+          { x: 100, opacity: 0, rotate: 45 },
           { 
             x: 0, 
             opacity: 1, 
-            scrollTrigger: {
-              trigger: sectionsRef.current[2],
-              start: "top 80%",
-              end: "top 40%",
-              scrub: true
-            }
-          }
-        );
-
-        gsap.fromTo(chutneyRef.current, 
-          { x: -100, opacity: 0 },
-          { 
-            x: 0, 
-            opacity: 1, 
+            rotate: 0,
             scrollTrigger: {
               trigger: sectionsRef.current[3],
               start: "top 80%",
@@ -161,31 +145,14 @@ export function ScrollStory() {
                 fill 
                 className="object-contain"
                 priority
-                data-ai-hint="folded masala dosa top"
               />
             )}
           </div>
           
-          {/* Floating Accents - Spices/Potato */}
+          {/* Chutney Accent Circle with Brown Border */}
           <div 
-            ref={potatoRef}
-            className="absolute -top-10 -right-10 w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden shadow-2xl opacity-80"
-          >
-            {images.potato && (
-              <Image 
-                src={images.potato.imageUrl} 
-                alt="Spices" 
-                fill 
-                className="object-cover"
-                data-ai-hint="indian spices" 
-              />
-            )}
-          </div>
-
-          {/* Chutney Accent - WITH BROWN BORDER */}
-          <div 
-            ref={chutneyRef}
-            className="absolute -bottom-10 -left-10 w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden shadow-2xl opacity-100 border-4 border-[#3E2723]"
+            ref={chutneyAccentRef}
+            className="absolute -top-12 -right-8 w-28 h-28 md:w-40 md:h-40 rounded-full overflow-hidden shadow-2xl border-[6px] border-[#3E2723] z-30"
           >
             {images.chutney && (
               <Image 
@@ -193,7 +160,6 @@ export function ScrollStory() {
                 alt="Coconut Chutney" 
                 fill 
                 className="object-cover"
-                data-ai-hint="coconut chutney bowl" 
               />
             )}
           </div>
