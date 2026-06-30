@@ -1,46 +1,29 @@
+
 {
   "placeholderImages": [
     {
-      "id": "hero-bg",
-      "description": "Premium South Indian Table",
-      "imageUrl": "https://picsum.photos/seed/dravida-hero/1920/1080",
-      "imageHint": "south indian food luxury"
+      "id": "hero-dosa",
+      "description": "Top down view of a crispy Masala Dosa",
+      "imageUrl": "https://picsum.photos/seed/dosa-top/800/800",
+      "imageHint": "masala dosa plate top"
     },
     {
-      "id": "dosa-visual",
-      "description": "Crispy Gold Dosa",
-      "imageUrl": "https://picsum.photos/seed/dravida-dosa/800/1200",
-      "imageHint": "dosa food photography"
+      "id": "potato-filling",
+      "description": "Spiced potato masala filling",
+      "imageUrl": "https://picsum.photos/seed/potato-filling/400/400",
+      "imageHint": "aloo masala bowl"
     },
     {
-      "id": "idly-visual",
-      "description": "Soft Steamed Idly",
-      "imageUrl": "https://picsum.photos/seed/dravida-idly/800/1200",
-      "imageHint": "idly steaming food"
+      "id": "chutney-side",
+      "description": "Coconut chutney side",
+      "imageUrl": "https://picsum.photos/seed/chutney/300/300",
+      "imageHint": "coconut chutney bowl"
     },
     {
-      "id": "vada-visual",
-      "description": "Crunchy Medu Vada",
-      "imageUrl": "https://picsum.photos/seed/dravida-vada/800/1200",
-      "imageHint": "vada south indian"
-    },
-    {
-      "id": "vintage-kitchen-1",
-      "description": "Traditional Brass Cookware",
-      "imageUrl": "https://picsum.photos/seed/dravida-brass/600/800",
-      "imageHint": "vintage brass cookware"
-    },
-    {
-      "id": "vintage-kitchen-2",
-      "description": "Ancient Stone Grinder",
-      "imageUrl": "https://picsum.photos/seed/dravida-stone/600/800",
-      "imageHint": "traditional stone grinder"
-    },
-    {
-      "id": "concierge-avatar",
-      "description": "Heritage Concierge",
-      "imageUrl": "https://picsum.photos/seed/dravida-concierge/400/400",
-      "imageHint": "elegant elderly person"
+      "id": "sambar-side",
+      "description": "Steaming sambar side",
+      "imageUrl": "https://picsum.photos/seed/sambar/300/300",
+      "imageHint": "sambar bowl"
     }
   ]
 }

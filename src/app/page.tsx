@@ -1,43 +1,28 @@
-import { Navbar } from '@/components/layout/Navbar';
-import { Hero } from '@/components/sections/Hero';
-import { MenuSection } from '@/components/sections/Menu';
-import { ConciergeSection } from '@/components/sections/Concierge';
-import { KitchenPulse } from '@/components/sections/KitchenPulse';
-import { GallerySection } from '@/components/sections/Gallery';
-import { ReservationsSection } from '@/components/sections/Reservations';
+
+import { ScrollStory } from '@/components/ScrollStory';
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
-      <Navbar />
-      <Hero />
-      <KitchenPulse />
-      <MenuSection />
-      <ConciergeSection />
-      <GallerySection />
-      <ReservationsSection />
+    <main className="min-h-screen bg-background">
+      <nav className="fixed top-0 left-0 right-0 p-8 flex justify-between items-center z-50 pointer-events-none">
+        <div className="font-headline text-2xl tracking-tighter uppercase pointer-events-auto">Dravida</div>
+        <div className="hidden md:flex gap-12 font-body text-xs uppercase tracking-widest pointer-events-auto">
+          <a href="#" className="hover:opacity-50 transition-opacity">Heritage</a>
+          <a href="#" className="hover:opacity-50 transition-opacity">Philosophy</a>
+          <a href="#" className="hover:opacity-50 transition-opacity">Bookings</a>
+        </div>
+      </nav>
       
-      {/* Premium Footer */}
-      <footer className="py-24 bg-background border-t border-primary/10 px-6">
-        <div className="max-w-7xl mx-auto flex flex-col items-center text-center space-y-12">
-          <div className="space-y-4">
-            <h2 className="font-headline text-4xl text-primary tracking-widest uppercase">Dravida Heritage</h2>
-            <p className="font-body text-sm text-foreground/40 max-w-md mx-auto">
-              Preserving the sacred flavors of the South. Artisan Idly, Dosa, and Vada since 1924.
-            </p>
-          </div>
-          
-          <div className="flex gap-12 font-body text-xs uppercase tracking-[0.3em] text-foreground/60">
-            <a href="#" className="hover:text-primary transition-colors">Privacy</a>
-            <a href="#" className="hover:text-primary transition-colors">Heritage</a>
-            <a href="#" className="hover:text-primary transition-colors">Careers</a>
-          </div>
-          
-          <div className="pt-12 border-t border-primary/5 w-full">
-            <p className="text-[10px] text-foreground/30 uppercase tracking-widest">
-              © {new Date().getFullYear()} Dravida Heritage. Crafted for the Discerning.
-            </p>
-          </div>
+      <ScrollStory />
+
+      <div className="vintage-texture" />
+      
+      <footer className="py-24 bg-[#EFEBE9] px-6 text-center">
+        <div className="max-w-4xl mx-auto space-y-8">
+          <h3 className="font-headline text-4xl">Dravida Heritage</h3>
+          <p className="font-body opacity-60 text-sm tracking-widest uppercase">Udupi • Bengaluru • Mysuru</p>
+          <div className="h-px w-24 bg-foreground/10 mx-auto" />
+          <p className="font-display italic text-lg opacity-40">"Simplicity is the ultimate sophistication of the South."</p>
         </div>
       </footer>
     </main>
