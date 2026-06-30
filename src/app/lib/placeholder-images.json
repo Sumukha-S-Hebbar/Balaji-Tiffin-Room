@@ -24,6 +24,36 @@
       "description": "Steaming sambar side",
       "imageUrl": "https://picsum.photos/seed/sambar/300/300",
       "imageHint": "sambar bowl"
+    },
+    {
+      "id": "concierge-avatar",
+      "description": "Vintage portrait of a South Indian steward",
+      "imageUrl": "https://picsum.photos/seed/steward/400/400",
+      "imageHint": "vintage indian portrait"
+    },
+    {
+      "id": "dosa-visual",
+      "description": "The Golden Paper Dosa",
+      "imageUrl": "https://picsum.photos/seed/dosa-visual/600/800",
+      "imageHint": "crispy paper dosa"
+    },
+    {
+      "id": "idly-visual",
+      "description": "Kanchipuram Silk Idly",
+      "imageUrl": "https://picsum.photos/seed/idly-visual/600/800",
+      "imageHint": "steamed kanchipuram idly"
+    },
+    {
+      "id": "vada-visual",
+      "description": "Black Pepper Medu Vada",
+      "imageUrl": "https://picsum.photos/seed/vada-visual/600/800",
+      "imageHint": "medu vada plate"
+    },
+    {
+      "id": "hero-bg",
+      "description": "South Indian food luxury background",
+      "imageUrl": "https://picsum.photos/seed/heritage-bg/1920/1080",
+      "imageHint": "luxury south indian restaurant"
     }
   ]
 }
